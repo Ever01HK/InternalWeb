@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Main</title>
+        <link rel="stylesheet" href="IntraNew.css">
+    </head>        
+    <body>
+        <div id="topContent">
+            <div id="sloganCon">
+                <div id="firstCon">Great World</div>
+                <div id="secondCon">Happy for Us</div>
+            </div>
+
+            <!-- Start of Header and Side menu -->
+            <div id="headerMenuBar">
+                <div id="headerMenu">
+                    <ul>
+                        <li>
+                            <!-- Greeting -->
+                            Hello. Claire!
+                            <!-- Last visit date -->
+                        </li>
+                        <li>
+                            <!-- @Html.Action("SignOut", "signOut", new {controller = "Account"}, new{@class = "sideMenu"})-->
+                            Logout
+                        </li>
+                        <li>
+                            <a class="sideMenu" onclick="openChagePasswordModal('EMP');" href="#">Change pwd</a>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--End of Header and Side menu-->            
+            <!--Check box in sub menu of supporting tasks-->
+            <input type="checkbox" id="menuBtn">
+
+            <!--Start of main menu bar -->
+            <div class="mainMenuBar">
+                <div class="mainMenu">
+                    <a href="#">
+                        <!--<img src="" style="position:absolute;"/> ../../logo.jpg-->
+                    </a>
+                    <ul>
+                        <li class="topLi">
+                            <a class="topMenu" href="#" target="_blank">Portal</a>
+                        </li>
+                        <li class="topLi">
+                            <a class="topMenu" href="#" target="_blank">Audit</a>
+                        </li>                                             
+                    </ul>
+
+                    <input type="checkbox" id="menuBtn">
+                    <label for="menuBtn" class="menu" onclick="myFunction()">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                    </label>
+                </div><!-- End of mainMenu -->
+            </div>
+
+            <!-- Start of SubMenuCon -->
+            <div class="subMenuCon" id="subMenuCon">
+                <label for="menuBtn">
+                    <!-- Start of subMenu -->
+                    <div class="subMenu">
+                        <ul>
+                            <li><a href="#" onclick="alert('Test1');" target="_blank">Test1</a></li>
+                            <li><a href="#" onclick="alert('Test2');" target="_blank">Test2</a></li>
+                            <li><a href="#" onclick="alert('Test3');" target="_blank">Test3</a></li>
+                            <!--
+                                @foreach(var MenuList in ViewBag.Support1)
+                                {
+                                    <li> <a href=@MenuList.Link target="_blank">@MenuList.Title</a> </li> 
+                                }
+                            -->
+                        </ul>
+                        <ul>
+                            <li><a href="#" onclick="alert('Test4');" target="_blank">Test4</a></li>
+                            <li><a href="#" onclick="alert('Test5');" target="_blank">Test5</a></li>
+                            <li><a href="#" onclick="alert('Test6');" target="_blank">Test6</a></li>
+                            <!--
+                                @foreach(var MenuList in ViewBag.Support2)
+                                {
+                                    <li> <a href=@MenuList.Link target="_blank">@MenuList.Title</a> </li> 
+                                }
+                            -->
+                        </ul>
+                        <ul>
+                            <li><a href="#" onclick="alert('Test7');" target="_blank">Test7</a></li>
+                            <li><a href="#" onclick="alert('Test8');" target="_blank">Test8</a></li>
+                            <li><a href="#" onclick="alert('Test9');" target="_blank">Test9</a></li>
+                            <!--
+                                @foreach(var MenuList in ViewBag.Support3)
+                                {
+                                    <li> <a href=@MenuList.Link target="_blank">@MenuList.Title</a> </li> 
+                                }
+                            -->
+                        </ul>
+                    </div>
+                    <!-- End of subMenu -->
+                    <!-- Start of subMenu -->
+                    <div class="subMenu">
+                        <ul>
+                            <!--
+                                @foreach(var MenuList in ViewBag.Support1)
+                                {
+                                    <li> <a href=@MenuList.Link target="_blank">@MenuList.Title</a> </li> 
+                                }
+                            -->
+                        </ul>
+                        <ul>
+                            <!--
+                                @foreach(var MenuList in ViewBag.Support2)
+                                {
+                                    <li> <a href=@MenuList.Link target="_blank">@MenuList.Title</a> </li> 
+                                }
+                            -->
+                        </ul>
+                        <ul>
+                            <!--
+                                @foreach(var MenuList in ViewBag.Support3)
+                                {
+                                    <li> <a href=@MenuList.Link target="_blank">@MenuList.Title</a> </li> 
+                                }
+                            -->
+                        </ul>
+                    </div>
+                    <!-- End of subMenu -->
+
+                </label>
+            </div>
+
+            <!-- Start of the middle part of the top of the body -->
+            <div class="topCenter">
+                <!-- Start lunch menu -->
+                <div id="sikdanMenu">
+
+                    <!-- 1. Title and date of lunch menu -->
+                    <div id="sikdanTitle">
+                        <a href="#" onclick="javascript:window.open('http://', '', 'left=0,top=0,width=850, height=700,scrollbars=yes')">Menu</a>
+                        <span style="float:right; font-size: 10pt;">2023.03.17</span>
+                    </div>
+
+                    <!-- 2. Content of lunch menu -->
+                    <div id="sikdanTab">
+                        <input type="radio" name="sikdanTab" id="sikdan01" checked>
+                        <label for="sikdan01">1</label>
+
+                        <input type="radio" name="sikdanTab" id="sikdan02" checked>
+                        <label for="sikdan02">2</label>
+                  
+
+                        <!-- 3-1. A lunch menu of cafeteria 1 -->
+                        <div class="sikdanCon bongwanSikdan">
+                            <p style="margin-top: 15px;">
+                                Steamed Brown Rice<br />
+                                Soy paste soup<br />
+                                Kimchi<br />
+                                Brocoli salad<br />
+                                Pork rib<br />
+                            </p>
+                        </div>
+
+                        <!-- 3-2. A lunch menu of cafeteria 2 -->
+                        <div class="sikdanCon sataegSikdan">
+                            <p style="margin-top: 15px;">
+                                Kimchi Fried Rice<br />
+                                Fishball soup<br />
+                                Kimchi<br />
+                                Seaweed salad<br />
+                                soy sourced pork belly<br />
+                            </p>
+                        </div>                    
+                    </div>                   
+                </div> <!-- End of lunch menu tab -->
+            </div><!--본문 상단 가운데 정렬 끝-->
+        </div> <!-- End of topContent -->
+
+        <!-- Start of menu of each plant-->
+        <div id="middleMenuBar">
+            <div id="middleMenu">
+                <!-- <img src="icon1.jpg" /> -->
+                <ul>
+                    <li class="middleLi">
+                        <a class="middleCon" href="#" target="_blank">SubIntranet 1</a>
+                    </li>
+                    <li class="middleLi">
+                        <a class="middleCon" href="#" target="_blank">SubIntranet 2</a>
+                    </li>
+                    <li class="middleLi">
+                        <a class="middleCon" href="#" target="_blank">SubIntranet 3</a>
+                    </li>
+                    <li class="middleLi">
+                        <a class="middleCon" href="#" target="_blank">SubIntranet 4</a>
+                    </li>
+                </ul> 
+            </div>
+        </div><!--  End of menu of each plant-->
+
+        <!-- Start of the bottom of the body -->
+        <div id="bottomContent">
+            <!-- Start of the middle part in the bottom of the body -->
+            <div class="bottomCenter">
+                <div class="workTitle title1">
+                    Administration
+                </div>
+                <div class="workTitle title2">
+                    Security
+                </div>
+                <div class="workTitle title3">
+                    Communication
+                </div>
+
+                <div class="workContent">
+                    <table class="workTable">
+                        <colgroup>
+                            <col width="3%" />
+                            <col width="*" />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src="./img/bluesmalltri.gif">
+                                </td>
+                                <td>
+                                    <a href="#" target="_blank">Guest Room Reservation</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="./img/bluesmalltri.gif">
+                                </td>
+                                <td>
+                                    <a href="#" target="_blank">Facility Reservation</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="./img/bluesmalltri.gif">
+                                </td>
+                                <td>
+                                    <a href="#" target="_blank">Electric Rules</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="./img/bluesmalltri.gif">
+                                </td>
+                                <td>
+                                    <a href="#" target="_blank">Booking Shuttle Bus</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="./img/bluesmalltri.gif">
+                                </td>
+                                <td>
+                                    <a href="#" target="_blank">Procurement</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="workContent content2">
+                    <table class="workTable">
+                        <colgroup>
+                            <col width="3%" />
+                            <col width="*" />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src="./img/bluesmalltri.gif">
+                                </td>
+                                <td>
+                                    <a href="#" target="_blank">Camera Management System</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="./img/bluesmalltri.gif">
+                                </td>
+                                <td>
+                                    <a href="#" target="_blank">Enterance System</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="./img/bluesmalltri.gif">
+                                </td>
+                                <td>
+                                    <a href="#" target="_blank">Deduction System</a>
+                                </td>
+                            </tr>                           
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="workContent">
+                    <table class="workTable">
+                        <colgroup>
+                            <col width="3%" />
+                            <col width="*" />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src="./img/bluesmalltri.gif">
+                                </td>
+                                <td>
+                                    <form name="frm" action="#" method="post">
+                                        <input type="hidden" name="sabun" value="@ViewBag.ICTONUrl" />
+                                        <a onclick="goITON();" target="_new" style="cursor:hand;">ICT Service</a>
+                                    </form>
+                                </td>
+                            </tr>                                                    
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Start of slider -->
+                <div id="slidebox">                   
+                    <Ul class="slideUl" style="display: flex; margin: -2px; width: 300px; height: 320px; overflow: hidden;">
+                        <li class="slideLi">
+                            <div class="slide01" style="width:300px; height:320px;">
+                                <a><img src="./img/slide1.png"></a>
+                            </div>
+                        </li>
+                        <li class="slideLi">
+                            <div class="slide02" style="width:295px; height:320px;">
+                                <a><img src="./img/kiwi_1.png"></a>
+                            </div>
+                        </li>                     
+                    </Ul>
+
+                    <div id="slideBtn">
+                        <input type="radio" class="slide_radio" id="radio_1" name="slider" checked />
+                        <label class="radio_button" for="radio_1"></label>
+                        <input type="radio" class="slide_radio"  id="radio_2" name="slider"  />                     
+                        <label class="radio_button" for="radio_2"></label>
+                    </div>
+
+                    <!-- Start banner -->
+                    <div style="float:left; width:100%; height: 100%; background: #fff; box-shadow:1px 1px 7px 2px #b8b8b8;">
+                        <img src="./img/announceBanner.png" />
+                        <div style="float:left; margin-top:50px;">
+                            <a href="#" target="_blank"></a>
+                        </div>
+                    </div> <!-- Start banner -->
+                </div><!-- End of slider -->
+
+                <!-- Start of right banner button in the bottom of the body -->
+                <div id="bannerMenu">
+                    <div class="bannerCon" >
+                        <a class="banner" href="#" target="_blank" style="color:#eaeaeb;">Quick Service</a>
+                    </div>
+                    <div class="bannerCon" style="background-position: right;" >
+                        <a class="banner" href="#" target="_blank"  style="color:#eaeaeb;">KPI of Head Quarter</a>
+                    </div>
+                    <div class="bannerCon" style="background-position: right;" >
+                        <a class="banner" href="#" target="_blank"  style="color:#eaeaeb;">Shared Market</a>
+                    </div>
+                    <div class="bannerCon" style="background-position: right;" >
+                        <a class="banner" href="#" target="_blank"  style="color:#eaeaeb;">Introduce New Employee</a>
+                    </div>
+                    <div class="bannerCon" style="background-position: right;" >
+                        <a class="banner" href="#" target="_blank"  style="color:#eaeaeb;">Notice of Head Quarter</a>
+                    </div>
+                    <div class="bannerCon" style="background-position: right;" >
+                        <a class="banner" href="#" target="_blank"  style="color:#eaeaeb;">Labor Union</a>
+                    </div>                   
+                </div><!-- End of  of right banner button in the bottom of the body -->
+
+                <!-- Start of direction, weather and time zone -->
+                <div style="float:right; margin:15px 15px 15px 0;">
+                    <div class="tabContent" style="margin-bottom: 15px;">
+                        <input type="radio" name="tabMenu" id="tab01" checked>
+                        <label for="tab01">Deupty Minister 1</label>
+                        
+                        <input type="radio" name="tabMenu" id="tab02" >
+                        <label for="tab02">Deupty Minister 2</label>
+
+                        <input type="radio" name="tabMenu" id="tab03" >
+                        <label for="tab03">Deupty Minister 3</label>
+
+                        <input type="radio" name="tabMenu" id="tab04" >
+                        <label for="tab04">Deupty Minister 4</label>
+
+                        <input type="radio" name="tabMenu" id="tab05" >
+                        <label for="tab05">Deupty Minister 5</label>
+
+                        <input type="radio">
+
+                        <div class="conLink Link1">
+                            <label><a href="#">+</a></label>
+                        </div>
+                        <div class="conLink Link2"><label><a href="#" target="_blank">+</a></label></div>
+
+                        <!-- Direction 1 -->
+                        <div class="conbox con1">
+                            <table id="TableBoardList1" class="tabTable">
+                                <colgroup>
+                                    <col width="3%" />
+                                    <col width="*" />
+                                    <col width="15%" />
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <img src="./img/bluesmalltri.gif">
+                                        </td>
+                                        <td style="text-align: left;">
+                                            <a href="#" target="_blank">Notice for the Event in Jan 2024 -1</a>
+                                        </td>
+                                        <td width="20px;">10DEC2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="./img/bluesmalltri.gif">
+                                        </td>
+                                        <td  style="text-align: left;">
+                                            <a href="#" target="_blank">Notice for the Event in Jan 2024 -2</a>
+                                        </td>
+                                        <td width="20px;">10DEC2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="./img/bluesmalltri.gif">
+                                        </td>
+                                        <td style="text-align: left;"> 
+                                            <a href="#" target="_blank">Notice for the Event in Jan 2024 -3</a>
+                                        </td>
+                                        <td width="20px;">10DEC2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="./img/bluesmalltri.gif">
+                                        </td>
+                                        <td style="text-align: left;">
+                                            <a href="#" target="_blank">Notice for the Event in Jan 2024 -4</a>
+                                        </td>
+                                        <td width="20px;">10DEC2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="./img/bluesmalltri.gif">
+                                        </td>
+                                        <td style="text-align: left;">
+                                            <a href="#" target="_blank">Notice for the Event in Jan 2024 -5</a>
+                                        </td>
+                                        <td width="20px;">10DEC2023</td>
+                                    </tr>
+                                    <!-- @foreach (var BoardList in ViewBag.BoardList1)
+                                    {
+                                        <tr>
+                                            <td>
+                                                <img src="./img/bluesmalltri.gif">
+                                            </td>
+                                            <td>
+                                                <a href="#" target="_blank">@BoardList.content</a>
+                                            </td>
+                                            <td width="20px;">@BoardList.wdate</td>
+                                        </tr>
+                                    } -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- Direction 2 -->
+                        <div class="conbox con2">
+                            <table id="TableBoardList2" class="tabTable">
+                                <colgroup>
+                                    <col width="3%" />
+                                    <col width="*" />
+                                    <col width="15%" />
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <img src="./img/bluesmalltri.gif">
+                                        </td>
+                                        <td style="text-align: left;">
+                                            <a href="#" target="_blank">Notice for the Event in Jan 2024 -a1</a>
+                                        </td>
+                                        <td width="20px;">10DEC2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="./img/bluesmalltri.gif">
+                                        </td>
+                                        <td  style="text-align: left;">
+                                            <a href="#" target="_blank">Notice for the Event in Jan 2024 -a2</a>
+                                        </td>
+                                        <td width="20px;">10DEC2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="./img/bluesmalltri.gif">
+                                        </td>
+                                        <td style="text-align: left;"> 
+                                            <a href="#" target="_blank">Notice for the Event in Jan 2024 -a3</a>
+                                        </td>
+                                        <td width="20px;">10DEC2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="./img/bluesmalltri.gif">
+                                        </td>
+                                        <td style="text-align: left;">
+                                            <a href="#" target="_blank">Notice for the Event in Jan 2024 -a4</a>
+                                        </td>
+                                        <td width="20px;">10DEC2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="./img/bluesmalltri.gif">
+                                        </td>
+                                        <td style="text-align: left;">
+                                            <a href="#" target="_blank">Notice for the Event in Jan 2024 -a5</a>
+                                        </td>
+                                        <td width="20px;">10DEC2023</td>
+                                    </tr>
+                                    <!-- @foreach (var BoardList in ViewBag.BoardList2)
+                                    {
+                                        <tr>
+                                            <td>
+                                                <img src="./img/bluesmalltri.gif">
+                                            </td>
+                                            <td>
+                                                <a href="#" target="_blank">@BoardList.content</a>
+                                            </td>
+                                            <td width="20px;">@BoardList.wdate</td>
+                                        </tr>
+                                    } -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- Direction 3 -->
+                        <div class="conbox con3">
+                            <table id="TableBoardList3" class="tabTable">
+                                <colgroup>
+                                    <col width="3%" />
+                                    <col width="*" />
+                                    <col width="15%" />
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <img src="./img/bluesmalltri.gif">
+                                        </td>
+                                        <td style="text-align: left;">
+                                            <a href="#" target="_blank">Notice for the Event in Jan 2024 -b1</a>
+                                        </td>
+                                        <td width="20px;">10DEC2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="./img/bluesmalltri.gif">
+                                        </td>
+                                        <td  style="text-align: left;">
+                                            <a href="#" target="_blank">Notice for the Event in Jan 2024 -b2</a>
+                                        </td>
+                                        <td width="20px;">10DEC2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="./img/bluesmalltri.gif">
+                                        </td>
+                                        <td style="text-align: left;"> 
+                                            <a href="#" target="_blank">Notice for the Event in Jan 2024 -b3</a>
+                                        </td>
+                                        <td width="20px;">10DEC2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="./img/bluesmalltri.gif">
+                                        </td>
+                                        <td style="text-align: left;">
+                                            <a href="#" target="_blank">Notice for the Event in Jan 2024 -b4</a>
+                                        </td>
+                                        <td width="20px;">10DEC2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="./img/bluesmalltri.gif">
+                                        </td>
+                                        <td style="text-align: left;">
+                                            <a href="#" target="_blank">Notice for the Event in Jan 2024 -b5</a>
+                                        </td>
+                                        <td width="20px;">10DEC2023</td>
+                                    </tr>
+                                    <!-- @foreach (var BoardList in ViewBag.BoardList3)
+                                    {
+                                        <tr>
+                                            <td>
+                                                <img src="./img/bluesmalltri.gif">
+                                            </td>
+                                            <td>
+                                                <a href="#" target="_blank">@BoardList.content</a>
+                                            </td>
+                                            <td width="20px;">@BoardList.wdate</td>
+                                        </tr>
+                                    } -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- Direction 4 -->
+                        <div class="conbox con4">
+                            <table id="TableBoardList4" class="tabTable">
+                                <colgroup>
+                                    <col width="3%" />
+                                    <col width="*" />
+                                    <col width="15%" />
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <img src="./img/bluesmalltri.gif">
+                                        </td>
+                                        <td style="text-align: left;">
+                                            <a href="#" target="_blank">Notice for the Event in Jan 2024 -c1</a>
+                                        </td>
+                                        <td width="20px;">10DEC2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="./img/bluesmalltri.gif">
+                                        </td>
+                                        <td  style="text-align: left;">
+                                            <a href="#" target="_blank">Notice for the Event in Jan 2024 -c2</a>
+                                        </td>
+                                        <td width="20px;">10DEC2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="./img/bluesmalltri.gif">
+                                        </td>
+                                        <td style="text-align: left;"> 
+                                            <a href="#" target="_blank">Notice for the Event in Jan 2024 -c3</a>
+                                        </td>
+                                        <td width="20px;">10DEC2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="./img/bluesmalltri.gif">
+                                        </td>
+                                        <td style="text-align: left;">
+                                            <a href="#" target="_blank">Notice for the Event in Jan 2024 -c4</a>
+                                        </td>
+                                        <td width="20px;">10DEC2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="./img/bluesmalltri.gif">
+                                        </td>
+                                        <td style="text-align: left;">
+                                            <a href="#" target="_blank">Notice for the Event in Jan 2024 -c5</a>
+                                        </td>
+                                        <td width="20px;">10DEC2023</td>
+                                    </tr>
+                                    <!-- @foreach (var BoardList in ViewBag.BoardList4)
+                                    {
+                                        <tr>
+                                            <td>
+                                                <img src="./img/bluesmalltri.gif">
+                                            </td>
+                                            <td>
+                                                <a href="#" target="_blank">@BoardList.content</a>
+                                            </td>
+                                            <td width="20px;">@BoardList.wdate</td>
+                                        </tr>
+                                    } -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- Direction 4 -->
+                        <div class="conbox con5">
+                            <table id="TableBoardList5" class="tabTable">
+                                <colgroup>
+                                    <col width="3%" />
+                                    <col width="*" />
+                                    <col width="15%" />
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <img src="./img/bluesmalltri.gif">
+                                        </td>
+                                        <td style="text-align: left;">
+                                            <a href="#" target="_blank">Notice for the Event in Jan 2024 -d1</a>
+                                        </td>
+                                        <td width="20px;">10DEC2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="./img/bluesmalltri.gif">
+                                        </td>
+                                        <td  style="text-align: left;">
+                                            <a href="#" target="_blank">Notice for the Event in Jan 2024 -d2</a>
+                                        </td>
+                                        <td width="20px;">10DEC2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="./img/bluesmalltri.gif">
+                                        </td>
+                                        <td style="text-align: left;"> 
+                                            <a href="#" target="_blank">Notice for the Event in Jan 2024 -d3</a>
+                                        </td>
+                                        <td width="20px;">10DEC2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="./img/bluesmalltri.gif">
+                                        </td>
+                                        <td style="text-align: left;">
+                                            <a href="#" target="_blank">Notice for the Event in Jan 2024 -d4</a>
+                                        </td>
+                                        <td width="20px;">10DEC2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="./img/bluesmalltri.gif">
+                                        </td>
+                                        <td style="text-align: left;">
+                                            <a href="#" target="_blank">Notice for the Event in Jan 2024 -d5</a>
+                                        </td>
+                                        <td width="20px;">10DEC2023</td>
+                                    </tr>
+                                    <!-- @foreach (var BoardList in ViewBag.BoardList5)
+                                    {
+                                        <tr>
+                                            <td>
+                                                <img src="./img/bluesmalltri.gif">
+                                            </td>
+                                            <td>
+                                                <a href="#" target="_blank">@BoardList.content</a>
+                                            </td>
+                                            <td width="20px;">@BoardList.wdate</td>
+                                        </tr>
+                                    } -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- Direction 5 -->
+                        <div class="conbox con6">
+                            <table id="TableBoardList6" class="tabTable">
+                                <colgroup>
+                                    <col width="3%" />
+                                    <col width="*" />
+                                    <col width="15%" />
+                                </colgroup>
+                                <tbody>
+                                    @foreach (var BoardList in ViewBag.BoardList6)
+                                    {
+                                        <tr>
+                                            <td>
+                                                <img src="./img/bluesmalltri.gif">
+                                            </td>
+                                            <td>
+                                                <a href="#" target="_blank">@BoardList.content</a>
+                                            </td>
+                                            <td width="20px;">@BoardList.wdate</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- Direction 6 -->
+                        <div class="conbox con7">
+                            <table id="TableBoardList7" class="tabTable">
+                                <colgroup>
+                                    <col width="3%" />
+                                    <col width="*" />
+                                    <col width="15%" />
+                                </colgroup>
+                                <tbody>
+                                    @foreach (var BoardList in ViewBag.BoardList7)
+                                    {
+                                        <tr>
+                                            <td>
+                                                <img src="./img/bluesmalltri.gif">
+                                            </td>
+                                            <td>
+                                                <a href="#" target="_blank">@BoardList.content</a>
+                                            </td>
+                                            <td width="20px;">@BoardList.wdate</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="tabContent">
+                        <input type="radio" name="printMenu" id="printTab01" checked>
+                        <label for="printTab01">Time zone</label>
+                        <input type="radio" name="printMenu" id="printTab02" checked>
+                        <label for="printTab02">Weather</label>
+
+                        <div class="conbox printCon1">
+                            <table class="printTable">
+                                <thead>
+                                    <tr>
+                                        <th>Nation</th>
+                                        <th>NZ</th>
+                                        <th>USA</th>
+                                        <th>CHN</th>
+                                        <th>UK</th>                                       
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>
+                                            Current Time
+                                        </th>
+                                        <td>
+                                            10:24 A.M
+                                        </td>
+                                        <td>
+                                            4:26 P.M
+                                        </td>
+                                        <td>
+                                           05:26 A.M
+                                        </td>
+                                        <td>
+                                           09:27 P.M
+                                        </td>
+                                        <!-- <td>
+                                            @ViewBag.Rx5
+                                        </td>
+                                        <td>
+                                            @ViewBag.Rx6
+                                        </td> -->
+                                    </tr>
+                            </table>
+                        </div>
+
+                        <div class="conbox printCon2">
+                            <table class="printTable2">
+                                <thead>
+                                    <tr>
+                                        <th>Temperature</th>
+                                        <th>Moisture</th>
+                                        <th>Rain</th>
+                                        <th>Velocity (10m)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>  
+                                        <td>
+                                            25℃
+                                        </td>
+                                        <td>
+                                            50%
+                                        </td>
+                                        <td>
+                                            20mm
+                                        </td>
+                                        <td>
+                                            20km/h
+                                        </td>
+                                    </tr>                               
+                                </tbody>
+                            </table>
+                        </div>
+                    </div> <!-- End of tabContent -->
+                </div> <!-- End of  of direction, weather and time zone -->
+            </div>  <!-- End of the middle part of the bottom of the body -->
+        </div> <!-- End of the bottom of the body -->
+
+        <!-- Start of footer -->
+        <div id="footer">
+            <div class="footerwarp">
+                <p class="copy">Hyunkyung Claire Oh ⓒ 2021 HK. All RIGHTS RESERVED</p>
+                <div style="clear:both"></div>
+            </div>
+        </div><!-- End of footer -->
+
+        <div style="position: fixed; padding: 15px; bottom: 30px; right:30px; border:1px solid #ddd; background: #f4f4f4; cursor:pointer; z-index:999;">
+            <a href="#">TOP</a>
+        </div>
+
+    </body>
+
+</html>

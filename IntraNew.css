@@ -1,0 +1,919 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 11pt;
+}
+
+
+/************the top of the body**************************/
+div#topContent{
+    position: relative;
+    width: 100%;
+    min-height: 490px;
+    background-image: url(./img/seoul_resize.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/************the bottom of the body*************************************/
+div#bottomContent{
+    position: relative;
+    width: 100%;
+    min-height: 760px;
+    background-image: url(./img/seoul_blur.jpg);
+   /* filter: opacity(50%); */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    overflow: visible;
+}
+
+
+/********* the slogan in the top of the body **********/
+#sloganCon {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-75%, -160%);
+    font-size: 29pt;
+    color: #fff;
+    z-index: 2;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: oblique;
+    line-height: 45px;
+}
+#firstCon {
+    width: 450px;
+    color: #03853e; /*#00b050;*/
+}
+
+#secondCon {
+    width: 450px;
+    color: #004099;
+    padding-left: 195px;
+}
+
+
+/*********** Header's menu bar **************************************/
+#headerMenuBar{
+    position: relative;
+    height: 35px;
+    background: rgba(0,0,0,0.12);
+    font-size: 10pt;
+}
+
+#headerMenuBar ul{
+    position: absolute;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    right: -3px;
+    max-height: 35px;
+}
+
+#headerMenuBar ul li{
+    position: relative;
+    color: #fff;
+    float: left;
+    width: 88px;
+    line-height: 35px;
+    text-align: center;
+}
+
+#headerMenu {
+    width: 1220px;
+    margin: 0 auto;
+    position: relative;
+    min-height: 35px;
+}
+
+/********* Header's side menu bar *********/
+.sideMenu{
+    color: #fff !important;
+    display: block;
+}
+
+
+/********* Main menu bar **********/
+.mainMenuBar {
+    position: relative;
+    min-height: 65px;
+    background: rgba(0,0,0,0,0.08);
+}
+
+.mainMenu {
+    max-width: 1220px;
+    margin: 0 auto;
+    position: relative;
+    min-height: 65px;
+}
+
+.mainMenu ul {
+    position: absolute;
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    right: 100px;
+    min-height: 65px;
+}
+
+.mainMenu ul li {
+    position: relative;
+    float: left;
+    width: 167px;
+    line-height: 65px;
+    text-align: center;
+    min-height: 65px;
+}
+
+/********* Main menu **********/
+a.topMenu {
+    display: block;
+    font-size: 12pt;
+    color: #fff !important;
+}
+
+/********* Main menu mouse over **********/
+.topLi:hover .topMenu {
+    font-size: 13pt;
+    transition: all .2s;
+    color: #fff;
+}
+
+/********* Hamburger button in Main menu **********/
+input#menuBtn {
+    display: none;
+}
+
+input#menuBtn + label.menu {
+    position: absolute;
+    top: 50%;
+    right: 1px;
+    display: block;
+    width: 30px;
+    height: 20px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+input#menuBtn + label span,
+input#menuBtn + label span:before,
+input#menuBtn + label span:after{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 30px;
+    background: #fff;
+    transition: all .4s;
+
+}
+
+input#menuBtn + label span{
+    top: 50%;
+    transform:translteY(-50%,-50%);
+}
+
+input#menuBtn + label span:before,
+input#menuBtn + label span:after{
+    content: '';
+}
+
+input#menuBtn + label span:before{
+    top:-10px;
+}
+
+input#menuBtn + label span:after{
+    top:10px;
+}
+
+/*hover*/
+input#menuBtn + label.menu:hover>span{
+    background:transparent;
+  }
+input#menuBtn + label.menu:hover>span:before{
+    top:0;
+    transform:rotate(45deg);
+  }
+input#menuBtn + label.menu:hover>span:after{
+    top:0;
+    transform:rotate(-45deg);
+  }
+
+
+/********* Sub menu button for supporting task **********/
+.subMenuCon {
+    max-height: 0;
+    position: absolute;
+    width: 100%;
+    background: #333333;
+    transition: all .4s;
+    z-index: 999;
+    overflow: hidden;
+    opacity: 0.7;
+}
+
+.subMenuCon label[for*="menuBtn"] {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.subMenu {
+    max-width: 1220px;
+    padding: 20px 0;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.subMenu > ul {
+    width: 33%;
+    padding: 0 8px;
+    float: left;
+}
+
+.subMenu > ul > li {
+    list-style: none;
+    padding: 5px;
+}
+
+/********* Subject of sub menu **********/
+.subMenu > ul > li.liTitle a {
+    color: #7be0ff;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15pt;
+    pointer-events: none;
+}
+
+/********* Sub menu **********/
+.subMenu > ul > li > a {
+    display: block;
+    color: #fff;
+}
+
+/********* Sub menu's mouse over **********/
+.subMenu > ul > li > a:hover {
+    color: #7be0ff;
+}
+
+/********* When checking input **********/
+input#menuBtn:checked ~ .subMenuCon {
+    max-height: 1000px;
+}
+
+/********* Middle menu bar **********/
+#middleMenuBar{
+    width: 100%;
+    min-height: 110px;
+    position: relative;
+    background: rgba(0, 0, 0, 0.2);
+    margin-top: -110px;
+}
+
+#middleMenu{
+    width: 900px;
+    min-height: 110px;
+    position: relative;
+    margin: 0 auto;
+}
+
+#middleMenu > img {
+    margin-left: 50px;
+    float: left;
+    transform: translateY(20%);
+}
+
+#middleMenu ul {
+    position: absolute;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    right: 10px;
+}
+
+#middleMenu .middleLi {
+    position: relative;
+    float: left;
+    width: 210px;
+    line-height: 110px;
+    text-align: center;
+}
+
+a.middleCon {
+    display: block;
+    font-size: 16pt;
+    color: #fff !important;
+    font-weight: bold;
+}
+
+.middleLi:hover .middleCon {
+    font-size: 17pt;
+    transition: all .2s;
+}
+
+/********* The simple supporting task menu in the bottom of the body **********/
+.workMenu {
+    line-height: 55px;
+    text-align: center;
+    color: #fff;
+}
+
+.workTitle {
+    width: 396px;
+    height: 55px;
+    float: left;
+    border-radius: 30px 30px 0 0;
+    box-shadow: 0 0 7px 2px #b8b8b8;
+    background: #1580b1;/*#4992b6;*/
+    font-size: 17pt;
+    color: #fff;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title2 {
+    margin: 0 15px;
+}
+
+.workContent {
+    width: 396px;
+    height: 165px;
+    float: left;
+    background: #fff;
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #dfdfdf;
+    box-shadow: 0 0 7px 2px #b8b8b8;
+    text-align: left;
+}
+
+.content2 {
+    margin: 5px 15px 0 15px;
+}
+
+/********* Tab menu **********/
+.tabContent {
+    width: 655px;
+    padding: 10px 15px 10px 15px;
+    background: #fff;
+    box-shadow: 1px 1px 8px 2px #b8b8b8;
+}
+
+.conbox {
+    width: 100%;
+    height: 155px;
+    background: #fff;
+    padding-top: 6px;
+    display: none;
+    overflow: auto;
+    border-top: 3px solid #dfdfdf;
+}
+
+.conLink {
+    display: none;
+}
+
+input[type="radio"] {
+    display: none;
+} 
+
+/********* Common style for radio button and label **********/
+input[type="radio"] + label {
+    display: block;
+    text-align: center;
+    cursor: pointer;
+} 
+
+.tabContent > label a {
+    float: right;
+    padding: 13px 10px;
+}
+
+input[name="tabMenu"] + label {
+    width: 120px;
+    line-height: 46px;
+    float: left;
+    background: #fff;
+    color: #252525;
+}
+
+input[name="tabMenu"]:checked + label {
+    background: #fff;
+    color: #2a7be5;
+    border-bottom: 3px solid #2a7be5;
+    margin-bottom: -3px;
+}
+
+input[name="printMenu"] + label {
+    width: 105px;
+    line-height: 42px;
+    float: left;
+    background: #fff;
+    color: #252525;
+}
+
+input[name="printMenu"]:checked + label {
+    background: #fff;
+    color: #2a7be5;
+    border-bottom: 3px solid #2a7be5;
+    margin-bottom: -3px;
+}
+
+/********* Tab for directions **********/
+input[id="tab01"]:checked ~ .con1 {
+    display: block;
+}
+
+input[id="tab02"]:checked ~ .con2 {
+    display: block;
+}
+
+input[id="tab03"]:checked ~ .con3 {
+    display: block;
+}
+
+input[id="tab04"]:checked ~ .con4 {
+    display: block;
+}
+
+input[id="tab05"]:checked ~ .con5 {
+    display: block;
+}
+
+input[id="tab06"]:checked ~ .con6 {
+    display: block;
+}
+
+input[id="tab07"]:checked ~ .con7 {
+    display: block;
+}
+
+input[id="tab01"]:checked ~ .conLink1 {
+    display: block;
+}
+
+input[id="tab02"]:checked ~ .conLink2 {
+    display: block;
+}
+
+/********* Tabs for weather **********/
+
+input[id="printTab01"]:checked ~ .printCon1 {
+    display: block;
+}
+
+input[id="printTab02"]:checked ~ .printCon2 {
+    display: block;
+}
+
+input[id="printTab03"]:checked ~ .printCon3 {
+    display: block;
+}
+
+input[id="printTab04"]:checked ~ .printCon4 {
+    display: block;
+}
+
+.printTable > thead > tr {
+    height: 50px;
+}
+
+.printTable > tbody > tr {
+    height: 50px;
+}
+
+.printTable > thead > tr > th {
+    width: 120px;
+}
+
+.printTable > tbody > tr > td {
+    width: 120px;
+}
+
+.printTable2 > thead > tr {
+    height: 50px;
+}
+
+.printTable2 > tbody > tr {
+    height: 50px;
+}
+
+.printTable2 > thead > tr > th {
+    width: 150px;
+}
+
+.printTable2 > tbody > tr > td {
+    width: 150px;
+}
+
+a {
+    text-decoration: none !important;
+    color: #000;
+}
+
+/********* The middle part in the top of the body **********/
+.topContent{width:1220px; height: 486px; position: relative; margin:0 auto; padding-top: 30px;}
+
+/********* Tab for Luch menu **********/
+#sikdanMenu {
+    width: 310px;
+    height: 190px;
+    padding-top: 8px;
+    margin: 0 0 10px 10px;
+    background: #f8ea71d9;/*rgba(245, 245, 245, 0.9);*/
+    border-radius: 8px;
+    color: #383838;
+    position: absolute;
+    left: 65%;
+    right: 20%;
+    top: 35%;
+}
+
+#sikdanTitle {
+    padding: 0 13px;
+}
+
+#sikdanTab {
+    height: 103px;
+    margin: 8px 0 8px;
+}
+
+#sikdanTab > ul > li {
+    position: relative;
+    width: 45px;
+}
+
+.sikdanCon {
+    width: 263px;
+    height: 100%;
+    padding: 0 15px;
+    display: none;
+    overflow: auto;
+    float: right;
+    margin-top: -103px;
+    line-height: 18px;
+}
+
+input[name="sikdanTab"] + label {
+    width: 47px;
+    background: #eee;
+    padding: 15px 0;
+}
+
+input[name="sikdanTab"]:checked + label {
+    background: #d0ceba;/* #dbdbdb;*/
+}
+
+input[id="sikdan01"]:checked ~ .bongwanSikdan {
+    display: block;
+}
+
+input[id="sikdan02"]:checked ~ .sataegSikdan {
+    display: block;
+}
+
+/********* Right banner in the top of the body **********/
+
+#rightMenu {
+    width: 310px;
+    float: right;
+    clear: right;
+}
+
+.rightBanner {
+    width: 100%;
+    padding: 0 20px;
+    float: left;
+}
+
+.rightBanner > a {
+    display: block;
+    line-height: 55px;
+    font-size: 18pt;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/********* Slider **********/
+#slidebox {
+    margin: 15px 15px 15px 0;
+    float: left;
+    width: 300px;    
+}
+
+#slidebox .slideUI {
+    display: flex;
+    margin: -2px;
+    width: 300px;
+    height: 280px;
+    overflow: hidden;
+}
+
+#slidebox .slideLi {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 300px;
+    transition: all .35s;
+}
+
+#slidebox img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Style radio button in the slide */
+#slideBtn {
+    padding: 10px;
+    margin-top:5px;
+    padding-left: 40%;   
+    width: 300px;
+    height: 40px;
+    margin: auto;
+    display : flex;
+    }
+#slideBtn input {
+    display: none;
+    }
+#slideBtn .radio_button {
+    cursor: pointer;
+    position: relative;
+    width: 15px;
+    height: 15px;
+    margin-left: 15px;
+    border-radius: 100%;
+    box-shadow: 0 0 0 3px #a7a7a7;
+    transition: all .15s ease;
+    }
+#slideBtn .radio_button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 100%;
+    background: #a7a7a7;
+    opacity: .5;
+    }
+#slideBtn input:checked + .radio_button, #slideBtn .radio_button:hover {
+    background: #757575;
+    box-shadow: 0 0 0 0 #757575;
+    }
+#slideBtn .radio_button:active {
+    background: transparent;
+    box-shadow: inset 0 0 0 3px #a7a7a7;
+    }
+
+/* The slide action */
+input[id="radio_1"]:checked~#slideUI .slideLi {
+    transform: translateY(0%)!important;
+    animation: slide01 30s infinite;
+}
+
+input[id="radio_2"]:checked~#slideUI .slideLi {
+    transform: translateY(-100%)!important;
+    animation: slide01 30s infinite;
+}
+
+/********* Banners in the bottom of the body **********/
+
+#bannerMenu {
+    width: 235px;
+    height: auto;
+    margin: 15px 0 15px 0;
+    float: right;
+    text-align: center;
+}
+
+.bannerCon {
+    width: 235px;
+    height: 67px;
+    padding: 0 11px;
+    margin-bottom: 10px;
+    float: left;
+    border-radius: 5px;
+    border: solid 2px;
+    border-color: #6588a3;
+    box-shadow: 2px 3px 5px #a6a6a6;
+    background: #1a79cac9;/*#1b7dd1;*//*#6db8dd;*/
+    color: #fff;
+    font-size: 15pt;
+    font-family: Arial;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bannerCon > banner {
+    display: block;
+    line-height: 67px;
+    text-align: left;
+    font-size: 12pt;
+}
+
+.banner:hover {
+    color: #2a7be5;
+    transition: all .3s;
+}
+
+/********* The middle part in the bottom of the body **********/
+.bottomCenter{width:1220px; height: auto; padding:30px 0 0; margin:0 auto; position:absolute; left:0; right: 0; text-align: center;}
+
+/********* table style **********/
+.tabTable {
+    width: 100%;
+    border: 0;
+    border-spacing: 0;
+    word-break: normal;
+    overflow: hidden;
+    border-collapse: separate;
+}
+
+.tabTable table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 0;
+    padding: 0;
+    word-break: break-all;
+    table-layout: fixed;
+}
+
+.tabTable tbody th {
+    height: 28px;
+    padding: 3px;
+}
+
+.tabTable tbody td {
+    height: 28px;
+    padding: 3px;
+}
+
+.tabTable tbody td a {
+    text-align: left;
+}
+
+.tabTable tbody td img {
+    text-align: center;
+}
+
+
+.printTabTable {
+    width: 100%;
+    height: 140 px;
+    border: 0;
+    border-spacing: 0;
+    word-break: normal;
+    overflow: hidden;
+    border-collapse: separate;
+    text-align: center;
+}
+
+.printTabTable table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 0;
+    padding: 0;
+    word-break: break-all;
+    table-layout: fixed;
+}
+
+.printTabTable thread th {
+    height: 28px;
+    background: #5196df;
+    color: #fff;
+}
+
+.printTabTable tbody th {
+    width: 100px;
+    height: 40px;
+    padding: 0 5px;
+    background: #eff7ff;
+    color: #5196df;
+    border-bottom: 1px dotted #ddd;
+}
+
+.printTabTable tbody td {
+    width: 90px;
+    height: 40px;
+    background: #eff7ff;
+    border-bottom: 1px dotted #ddd;
+}
+
+.workTable {
+    width: 100%;
+    border: 0;
+    border-spacing: 0;
+    word-break: normal;
+    overflow: hidden;
+    border-collapse: separate;
+    background: #fff;
+}
+
+.workTable table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 0;
+    padding: 0;
+    word-break: break-all;
+    table-layout: fixed;    
+}
+
+.workTable thread th {
+    height: 28px;
+    padding: 3px;
+    background: #d2e2f1;
+    color: #fff;
+    text-align: center;
+}
+
+.workTable tbody th {
+    height: 28px;
+    padding: 3px;
+    background: #d2e2f1;
+    color: #000;
+    text-align: center;
+}
+
+.workTable tbody td {
+    height: 28px;
+    padding: 3px;
+}
+
+.workTable tbody td a:hover {
+    color: #2a7be5;
+}
+
+/********* Simple menu for supporting tasks **********/
+input#workBtn {
+    display: none;
+}
+
+input#workBtn:checked ~ div label span:nth-child(1){
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+input#workBtn:checked ~ div label span:nth-child(2){
+    top: 50%;
+    transform: translateY(50%);
+}
+
+.workSubMenu {
+    max-height: 0;
+    position: absolute;
+    width: 210px;
+    height: 200px;
+    background: #44577c;
+    transition: all .35s;
+    z-index: 999;
+    overflow: hidden;
+    top: 215px;
+}
+
+input#workBtn:checked ~ .workSubMenu {
+    max-height: 100%;
+}
+
+/********* footer **********/
+#footer {
+    position: relative;
+    width: 100%;
+    min-height: 100px;
+    background: black;    
+    margin: 0;
+    padding: 0;
+    clear: both;
+}
+
+#footer > div {
+    width: 1220px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 80px;
+}
+
+#footer > div > p{
+    padding: 0;
+    color: #808080;
+    letter-spacing: 0;
+    text-align: center;    
+    line-height: 100px;
+    font-weight: bold;
+}
+
+
+
